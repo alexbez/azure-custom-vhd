@@ -18,6 +18,10 @@ echo "Creating storage account: $3"
 az storage account create --resource-group $1 --location $2 --name $3 --kind Storage --sku Premium_LRS
 
 echo "Listing storage account keys"
+
+SA_KEY=$(az storage account keys list --resource-group $1 --account-name $3 --query [0].value --output tsv)
+echo "Make a note of your blob storage account key: $SA_KEY"
+
 az storage account keys list --resource-group $1 --account-name $3 > storage-account-keys.txt
 cat storage-account-keys.txt
 echo "Keys are stored in $KEYS_FILE file. Keep it for further uploading a custom VHD image to '$4'"
