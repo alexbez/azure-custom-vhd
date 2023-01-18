@@ -17,11 +17,11 @@ then
    echo "Usage: $0 <resource_group> [<location> [<storage_account> [<storage_container> [<vnet> [<subnet>]]]]]"
    echo ""
    echo "Defaults:"
-   echo "    <location> ${LOCATION}"
-   echo "    <storage_account> ${STORAGE_ACCOUNT}"
+   echo "    <location>          ${LOCATION}"
+   echo "    <storage_account>   ${STORAGE_ACCOUNT}"
    echo "    <storage_container> ${STORAGE_CONTAINER}"
-   echo "    <vnet> ${VNET}"
-   echo "    <subnet> ${SUBNET}"
+   echo "    <vnet>              ${VNET}"
+   echo "    <subnet>            ${SUBNET}"
    echo ""
    exit 1
 fi
